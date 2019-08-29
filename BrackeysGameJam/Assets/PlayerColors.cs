@@ -9,13 +9,19 @@ public class PlayerColors : MonoBehaviour
 
     private Material material;
 
+
+    public List<Renderer> Renders = new List<Renderer> { };
+
     void Start()
     {
        
         Material material = new Material(Shader.Find(GameConfig.ShaderName));
         material.color = visibleColor;
 
-        GetComponent<Renderer>().material = material;
+        foreach(var r in Renders)
+        {
+            r.material = material;
+        }
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -29,7 +35,10 @@ public class PlayerColors : MonoBehaviour
 
             //GetComponent<Renderer>().material = material;
 
-            GetComponent<Renderer>().material.color = visibleColor;
+            foreach (var r in Renders)
+            {
+                r.material.color = visibleColor;
+            }
         }
     }
 }

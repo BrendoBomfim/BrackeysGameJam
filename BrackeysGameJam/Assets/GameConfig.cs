@@ -6,5 +6,5 @@ using UnityEngine;
 //Some Configs
 public static class GameConfig 
 {
-    public static string ShaderName = "Unlit/Color";
+    public static string ShaderName = "Unlit/UnlitNew";
 }
