@@ -5,6 +5,8 @@ using UnityEngine;
 public class CubeController : MonoBehaviour
 {
     public Color color;
+    public float destroyHeight = -20f;
+
     void Start()
     {
         Material material = new Material(Shader.Find(GameConfig.ShaderName));
@@ -13,9 +15,12 @@ public class CubeController : MonoBehaviour
         GetComponent<Renderer>().material = material;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        
+       if(transform.position.y < destroyHeight)
+        {
+            Destroy(gameObject);
+        } 
     }
 
     private void OnCollisionEnter(Collision collision)
