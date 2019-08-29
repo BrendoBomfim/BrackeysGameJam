@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float moveSpeed;
+    [Range(0,20)]
+    public float moveSpeed = 10f;
     private Vector3 moveDirection;
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 10f;
         moveDirection = new Vector3();
     }
 
@@ -23,6 +23,6 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         
-        transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
+        transform.Translate(moveDirection.normalized * Time.deltaTime * moveSpeed);
     }
 }

@@ -9,7 +9,7 @@ public class PlayerColors : MonoBehaviour
 
     void Start()
     {
-        Material material = new Material(Shader.Find("Transparent/Diffuse"));
+        Material material = new Material(Shader.Find("Unlit/Color"));
         material.color = visibleColor;
 
         GetComponent<Renderer>().material = material;
