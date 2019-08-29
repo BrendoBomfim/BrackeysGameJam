@@ -7,7 +7,7 @@ public class CubeController : MonoBehaviour
     public Color color;
     void Start()
     {
-        Material material = new Material(Shader.Find("Transparent/Diffuse"));
+        Material material = new Material(Shader.Find(GameConfig.ShaderName));
         material.color =  color;
 
         GetComponent<Renderer>().material = material;

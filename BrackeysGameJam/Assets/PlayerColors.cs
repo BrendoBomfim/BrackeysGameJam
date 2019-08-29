@@ -12,7 +12,7 @@ public class PlayerColors : MonoBehaviour
     void Start()
     {
        
-        Material material = new Material(Shader.Find("Unlit/Color"));
+        Material material = new Material(Shader.Find(GameConfig.ShaderName));
         material.color = visibleColor;
 
         GetComponent<Renderer>().material = material;
@@ -25,9 +25,11 @@ public class PlayerColors : MonoBehaviour
             trueColor = collider.gameObject.GetComponent<ColorChange>().trueColor;
             visibleColor = collider.gameObject.GetComponent<ColorChange>().visibleColor;
 
-            material.color = visibleColor;
+            //material.color = visibleColor;
 
-            GetComponent<Renderer>().material = material;
+            //GetComponent<Renderer>().material = material;
+
+            GetComponent<Renderer>().material.color = visibleColor;
         }
     }
 }
