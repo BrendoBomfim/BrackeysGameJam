@@ -23,7 +23,7 @@ public class CubeController : MonoBehaviour
         } 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private IEnumerator OnCollisionEnter(Collision collision)
     {
         
         if (collision.gameObject.tag == "Player")
@@ -33,9 +33,12 @@ public class CubeController : MonoBehaviour
 
             if (color.IsEqualTo(playerColor))
             {
+                yield return new WaitForSeconds(0.5f);
                 Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
                 rigidbody.useGravity = true;
+                gameObject.GetComponent<Collider>().enabled = false;
                 rigidbody.constraints = RigidbodyConstraints.None;
+
             }
             
 
