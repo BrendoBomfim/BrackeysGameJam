@@ -112,7 +112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &535770495674164847
 Transform:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.39693913, y: 0.00000008897132, z: 0.7505948}
+    m_Extent: {x: 0.39693943, y: 0.00000007034488, z: 0.75059533}
   m_DirtyAABB: 0
 --- !u!183 &535770495674164832
 Cloth:
@@ -533,7 +533,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 47854b6fa4b97834ca55e5b1032df98b, type: 2}
+  - {fileID: 2100000, guid: 0e28b0da5d6dc254db7bbe8a20ca7bb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -718,7 +718,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 47854b6fa4b97834ca55e5b1032df98b, type: 2}
+  - {fileID: 2100000, guid: 0e28b0da5d6dc254db7bbe8a20ca7bb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -810,7 +810,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 47854b6fa4b97834ca55e5b1032df98b, type: 2}
+  - {fileID: 2100000, guid: 0e28b0da5d6dc254db7bbe8a20ca7bb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1043,7 +1043,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 47854b6fa4b97834ca55e5b1032df98b, type: 2}
+  - {fileID: 2100000, guid: 0e28b0da5d6dc254db7bbe8a20ca7bb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1352,11 +1352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dadff975c8a644abf74903400c081e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trueColor: {r: 0.12922749, g: 0.8301887, b: 0.7514168, a: 1}
-  visibleColor: {r: 0.12941177, g: 0.83137256, b: 0.7529412, a: 1}
+  trueColor: {r: 0.11546574, g: 0.122641504, b: 0.11049306, a: 1}
+  visibleColor: {r: 0.8416696, g: 0.9245283, b: 0.9152703, a: 1}
   Renders:
-  - {fileID: 535770495951649555}
-  - {fileID: 7311640907474233456}
+  - {fileID: 535770495674164833}
   - {fileID: 7311640908197828491}
 --- !u!95 &8735824489929614854
 Animator:

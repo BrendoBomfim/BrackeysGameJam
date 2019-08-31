@@ -106,5 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664a5ba6329b7da438ceeeeee5d63ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trueColor: {r: 0.4509804, g: 0.8980392, b: 0.14117648, a: 1}
-  visibleColor: {r: 0.4509804, g: 0.8980392, b: 0.14117648, a: 1}
+  trueColor: {r: 0.8416696, g: 0.9245283, b: 0.9152703, a: 1}
+  visibleColor: {r: 0.8416696, g: 0.9245283, b: 0.9152703, a: 1}
