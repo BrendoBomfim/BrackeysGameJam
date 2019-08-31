@@ -2378,7 +2378,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -55, y: 65}
-  m_SizeDelta: {x: 421.1, y: 97.9}
+  m_SizeDelta: {x: 50, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942991410
 MonoBehaviour:
@@ -2392,8 +2392,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46be38dcc85ba4042913efcc4cbd2068, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelText: {fileID: 1639404655}
   panelRectTransform: {fileID: 942991409}
+  growX: 4
+  growY: 0.2
+  dismissTime: 4
+  repeatTimes: 100
 --- !u!114 &942991411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4275,7 +4278,7 @@ MonoBehaviour:
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
-  m_isTextTruncated: 0
+  m_isTextTruncated: 1
   m_enableKerning: 1
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
@@ -4296,12 +4299,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 2.1747437, w: 0}
   m_textInfo:
     textComponent: {fileID: 1639404655}
-    characterCount: 66
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 12
-    wordCount: 13
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
