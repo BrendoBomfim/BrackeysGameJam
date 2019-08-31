@@ -9,6 +9,13 @@ public class LevelController : MonoBehaviour
     public float destroyHeight = -20f;
     private void OnTriggerEnter(Collider other)
     {
+
+        if (other.gameObject.GetComponent<GameEnd>())
+        {
+            other.gameObject.GetComponent<GameEnd>().GoGameEnd();
+            return;
+        }
+
         if(other.gameObject.tag == "Finish")
         {
             NextScene();
