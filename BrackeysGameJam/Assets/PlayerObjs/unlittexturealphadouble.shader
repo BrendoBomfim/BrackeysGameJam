@@ -5,7 +5,7 @@ Shader "Unlit/UnlitNew"
 	Properties
 	{
 		_Color("Shader Color", Color) = (1,1,1,1)
-		_diffuseMap("Shader Texture", 2D) = "white" {}
+		_MainTex("Shader Texture", 2D) = "white" {}
 		_alphaPower ("Alpha Power", Float) = 1
 		
 	}
@@ -32,8 +32,8 @@ Shader "Unlit/UnlitNew"
 			#include "UnityCG.cginc"
 			
 			uniform fixed4 _Color;
-			uniform sampler2D _diffuseMap;
-			uniform half4 _diffuseMap_ST;
+			uniform sampler2D _MainTex;
+			uniform half4 _MainTex_ST;
 			uniform half _alphaPower;
 			
 			struct app2vert {
@@ -55,8 +55,8 @@ Shader "Unlit/UnlitNew"
 			fixed4 pShader(vert2Pixel IN): COLOR
 			{
 				fixed4 outColor;							
-				half2 diffuseUVs = TRANSFORM_TEX(IN.uvs, _diffuseMap);
-				fixed4 texSample = tex2D(_diffuseMap, diffuseUVs);
+				half2 diffuseUVs = TRANSFORM_TEX(IN.uvs, _MainTex);
+				fixed4 texSample = tex2D(_MainTex, diffuseUVs);
 				texSample.w = pow(texSample.w, _alphaPower);
 				outColor = texSample * _Color;
 				return outColor;
@@ -84,8 +84,8 @@ Shader "Unlit/UnlitNew"
 			#include "UnityCG.cginc"
 			
 			uniform fixed4 _Color;
-			uniform sampler2D _diffuseMap;
-			uniform half4 _diffuseMap_ST;
+			uniform sampler2D _MainTex;
+			uniform half4 _MainTex_ST;
 			uniform half _alphaPower;
 			
 			struct app2vert {
@@ -107,8 +107,8 @@ Shader "Unlit/UnlitNew"
 			fixed4 pShader(vert2Pixel IN): COLOR
 			{
 				fixed4 outColor;							
-				half2 diffuseUVs = TRANSFORM_TEX(IN.uvs, _diffuseMap);
-				fixed4 texSample = tex2D(_diffuseMap, diffuseUVs);
+				half2 diffuseUVs = TRANSFORM_TEX(IN.uvs, _MainTex);
+				fixed4 texSample = tex2D(_MainTex, diffuseUVs);
 				texSample.w = pow(texSample.w, _alphaPower);
 				outColor =texSample * _Color;
 				return outColor;

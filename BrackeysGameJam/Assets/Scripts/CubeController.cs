@@ -7,11 +7,13 @@ public class CubeController : MonoBehaviour
     public Color color;
     public float destroyHeight = -20f;
 
+    public Texture2D Tex;
+
     void Start()
     {
         Material material = new Material(Shader.Find(GameConfig.ShaderName));
         material.color =  color;
-
+        material.mainTexture = Tex;
         GetComponent<Renderer>().material = material;
     }
 
