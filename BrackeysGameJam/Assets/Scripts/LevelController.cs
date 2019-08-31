@@ -31,7 +31,7 @@ public class LevelController : MonoBehaviour
 
     private void PreviusScene()
     {
-        if (SceneManager.GetActiveScene().buildIndex > 0)
+        if (SceneManager.GetActiveScene().buildIndex > 1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }else
